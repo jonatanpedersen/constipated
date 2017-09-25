@@ -1,10 +1,10 @@
-var {reliefGlob, reliefFile, reliefString} = require('../');
+var {relieveGlob, relieveFile, relieveString} = require('../');
 var {expect} = require('chai');
 
 describe('constipated', () => {
-	describe('reliefString', () => {
-		it('should relief the string', () => {
-			var actual = reliefString('const constipated = false');
+	describe('relieveString', () => {
+		it('should relieve the string', () => {
+			var actual = relieveString('const constipated = false');
 			var expected = 'var constipated = false';
 
 			expect(actual).to.eql(expected);

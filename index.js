@@ -1,20 +1,20 @@
 var glob = require('glob');
 
-module.exports = {reliefGlob, reliefFile, reliefString};
+module.exports = {relieveGlob, relieveFile, relieveString};
 
-function reliefGlob (pattern) {
+function relieveGlob (pattern) {
 	var files = flob.sync(pattern);
 
-	files.forEach(reliefFile);
+	files.forEach(relieveFile);
 };
 
-function reliefFile (file) {
+function relieveFile (file) {
 	var contents = readFile(file);
-	var newContents = reliefString(contents);
+	var newContents = relieveString(contents);
 	writeFile(file, newContents);
 }
 
-function reliefString (str) {
+function relieveString (str) {
 	return str.replace(/const(\s*[^\s]+\s*=\s*)/gmi, 'var$1');
 }
 

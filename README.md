@@ -1,5 +1,5 @@
 # constipated
-Reliefs your constipated globs, files and strings.
+relieves your constipated globs, files and strings.
 
 ## Installation
 
@@ -10,8 +10,8 @@ $ npm i consipated --save
 ## Usage
 
 ``` javascript
-var {reliefString} = require('constipated');
-console.log(reliefString('const constipated = true'));
+var {relieveString} = require('constipated');
+console.log(relieveString('const constipated = true'));
 // var constipated = true;
 ```
 
