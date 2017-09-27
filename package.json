@@ -4,6 +4,8 @@
   "description": "Turns your consts in to vars, release those variables.",
   "main": "index.js",
   "scripts": {
+    "postversion": "git push && git push --tags",
+    "preversion": "npm test",
     "test": "mocha"
   },
   "repository": {
