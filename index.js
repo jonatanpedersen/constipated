@@ -7,7 +7,7 @@ function relieveGlob (pattern) {
 	var files = glob.sync(pattern);
 
 	files.forEach(relieveFile);
-};
+}
 
 function relieveFile (file) {
 	var contents = readFile(file);

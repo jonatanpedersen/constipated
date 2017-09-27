@@ -5,6 +5,7 @@ Make re-assigments great again!
 
 [![Build Status](https://travis-ci.org/jonatanpedersen/constipated.svg?branch=master)](https://travis-ci.org/jonatanpedersen/constipated)
 [![Build Status](https://img.shields.io/npm/v/constipated.svg)](https://www.npmjs.com/package/constipated)
+[![Coverage Status](https://coveralls.io/repos/github/jonatanpedersen/constipated/badge.svg?branch=master)](https://coveralls.io/github/jonatanpedersen/constipated?branch=master)
 
 ## Installation
 

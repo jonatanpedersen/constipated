@@ -14,7 +14,7 @@ describe('constipated', () => {
 	});
 
 	describe('relieveFile', () => {
-		var inputDir, expectedDir, actualDir, actualFile;
+		var inputDir, expectedDir, actualDir, actualFile, comparison;
 
 		before(() => {
 			inputDir = './test/fixtures/file/input';
@@ -43,7 +43,7 @@ describe('constipated', () => {
 	});
 
 	describe('relieveGlob', () => {
-		var inputDir, expectedDir, actualDir, glob;
+		var inputDir, expectedDir, actualDir, glob, comparison;
 
 		before(() => {
 			inputDir = './test/fixtures/glob/input';
