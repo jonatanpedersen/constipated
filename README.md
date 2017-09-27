@@ -1,10 +1,15 @@
 # constipated
-relieves your constipated globs, files and strings.
+Are you fed up with your snarky co-worker constantly changing all your precious vars to consts, preventing you from reassigning variables in places no one would ever suspect? Then constipated can help you take back control and relieve all those poor locked up variables. Constipated brings freedom to all variables, no matter where they are declared, or what values they hold.
+
+Make re-assigments great again!
+
+[![Build Status](https://travis-ci.org/jonatanpedersen/constipated.svg?branch=master)](https://travis-ci.org/jonatanpedersen/constipated)
+[![Build Status](https://img.shields.io/npm/v/constipated.svg)](https://www.npmjs.com/package/constipated)
 
 ## Installation
 
 ```bash
-$ npm i consipated --save
+$ npm i constipated --save
 ```
 
 ## Usage
