@@ -14,10 +14,23 @@ $ npm i constipated --save
 
 ## Usage
 
+### relieveString(str)
 ``` javascript
 var {relieveString} = require('constipated');
 console.log(relieveString('const constipated = true'));
 // var constipated = true;
+```
+
+### relieveFile(file)
+``` javascript
+var {relieveFile} = require('constipated');
+relieveFile('src/main.js');
+```
+
+### relieveGlob(pattern)
+``` javascript
+var {relieveGlob} = require('constipated');
+relieveGlob('src/**/*.js');
 ```
 
 ## License
