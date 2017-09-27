@@ -1,7 +1,7 @@
 {
   "name": "constipated",
   "version": "0.0.0",
-  "description": "Turns your consts in to vars, release those variables.",
+  "description": "Turns your consts in to vars, relieve those variables.",
   "main": "index.js",
   "scripts": {
     "postversion": "git push && git push --tags",
