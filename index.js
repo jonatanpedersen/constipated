@@ -1,12 +1,10 @@
-var glob = require('glob');
 var fs = require('fs');
+var glob = require('glob');
 
-module.exports = {relieveGlob, relieveFile, relieveString};
+module.exports = {relieveFile, relieveGlob, relieveString};
 
-function relieveGlob (pattern) {
-	var files = glob.sync(pattern);
-
-	files.forEach(relieveFile);
+function readFile(file) {
+	return fs.readFileSync(file, 'utf8');
 }
 
 function relieveFile (file) {
@@ -15,12 +13,14 @@ function relieveFile (file) {
 	writeFile(file, newContents);
 }
 
-function relieveString (str) {
-	return str.replace(/const(\s*[^\s]+\s*=\s*)/gmi, 'var$1');
+function relieveGlob (pattern) {
+	var files = glob.sync(pattern);
+
+	files.forEach(relieveFile);
 }
 
-function readFile(file) {
-	return fs.readFileSync(file, 'utf8');
+function relieveString (str) {
+	return str.replace(/const(\s*[^\s]+\s*=\s*)/gmi, 'var$1');
 }
 
 function writeFile(file, contents) {

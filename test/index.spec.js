@@ -1,18 +1,9 @@
-var {relieveGlob, relieveFile, relieveString} = require('../');
+var {relieveFile, relieveGlob, relieveString} = require('../');
 var {expect} = require('chai');
 var {copySync, emptyDirSync} = require('fs-extra');
 var {compareSync} = require('dir-compare');
 
 describe('constipated', () => {
-	describe('relieveString', () => {
-		it('should relieve the string', () => {
-			var actual = relieveString('const constipated = false');
-			var expected = 'var constipated = false';
-
-			expect(actual).to.eql(expected);
-		});
-	});
-
 	describe('relieveFile', () => {
 		var inputDir, expectedDir, actualDir, actualFile, comparison;
 
@@ -24,7 +15,6 @@ describe('constipated', () => {
 			emptyDirSync(actualDir);
 			copySync(inputDir, actualDir);
 			relieveFile(actualFile);
-
 		});
 
 		it('should relieve the file', () => {
@@ -67,6 +57,15 @@ describe('constipated', () => {
 
 				throw err;
 			}
+		});
+	});
+
+	describe('relieveString', () => {
+		it('should relieve the string', () => {
+			var actual = relieveString('const constipated = false');
+			var expected = 'var constipated = false';
+
+			expect(actual).to.eql(expected);
 		});
 	});
 });
